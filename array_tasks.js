@@ -36,8 +36,8 @@ var arrayTasks = {
 			}
 		}
 		for (i=0; i<newArray.length;i++){
-			if(newArray[i] === newArray[i+1]){
-				newArray.splice(i,1)
+			if(newArray[i] === newArray[i-1]){
+				newArray.splice(i,i)
 			}
 		}
 		return newArray
@@ -63,10 +63,16 @@ var arrayTasks = {
 		return indexArray
 	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-		
-	// }
-
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var number = 0
+		var newArray = []
+		arr.forEach(function(element){
+			if(element % 2 === 0){
+				number += element*element
+			}
+		})
+		return number
+	}
 }
 
 module.exports = arrayTasks
