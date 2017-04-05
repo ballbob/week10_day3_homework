@@ -52,9 +52,16 @@ var arrayTasks = {
 		return arr
 	},
 
-	// findIndexesOf: function (arr, itemToFind) {
-		
-	// },
+	findIndexesOf: function (arr, itemToFind) {
+		var indexArray = []
+
+		for (i=0; i<arr.length; i++){
+			if(arr[i] == itemToFind){
+				indexArray.push(i)
+			}
+		}
+		return indexArray
+	},
 
 	// sumOfAllEvenNumbersSquared: function (arr) {
 		
