@@ -43,9 +43,14 @@ var arrayTasks = {
 		return newArray
 	},
 
-	// removeAndClone: function (arr, valueToRemove) {
-		
-	// },
+	removeAndClone: function (arr, valueToRemove) {
+		for (i=0; i<arr.length; i++){
+			if(arr[i] == valueToRemove){
+				arr.splice(i,1)
+			}
+		}
+		return arr
+	},
 
 	// findIndexesOf: function (arr, itemToFind) {
 		
