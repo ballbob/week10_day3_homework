@@ -30,6 +30,7 @@ var arrayTasks = {
 
 	findDuplicates: function (arr) {
 		newArray = []
+		arr.sort()
 		for (i = 0; i < arr.length; i++){
 			if(arr[i] === arr[i+1]){
 				newArray.push(arr[i])
@@ -65,7 +66,6 @@ var arrayTasks = {
 
 	sumOfAllEvenNumbersSquared: function (arr) {
 		var number = 0
-		var newArray = []
 		arr.forEach(function(element){
 			if(element % 2 === 0){
 				number += element*element
